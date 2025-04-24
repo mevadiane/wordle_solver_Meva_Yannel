@@ -1,12 +1,10 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include"getBDD.h"
+#include "getBDD.h"
 #include <time.h>
 
-
-int main()
-{
+int main(){
 	char listeMots[TOTAL_WORDS][MAX_WORD_LENGTH];
 	getWord("ressource/bdd_wordle_only.txt",listeMots);
 	char next='i';
