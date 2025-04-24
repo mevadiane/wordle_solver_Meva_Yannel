@@ -30,8 +30,8 @@ void getWord(char* bddName, char words[TOTAL_WORDS][MAX_WORD_LENGTH])
 {
     FILE* file = fopen(bddName, "r");
     if (!file) {
-        perror("Erreur ouverture fichier");
-        exit(EXIT_FAILURE);
+	perror("Erreur ouverture fichier");
+	exit(1);
     }
 
     int i = 0;

@@ -1,13 +1,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include"header.h"
+#include"getBDD.h"
 #include <time.h>
 
-int filter_contains(char* x)
-{
-
-}
 
 int main()
 {
@@ -19,11 +15,13 @@ int main()
 	{
 		printf("Words with : '.....' "); //search with position = ..p..
 		scanf(" %c",&var);
-		filter_contains(listeMots, &var);
+		filter_contain(listeMots, &var);
 		printf("What filter do you want to try next [Include/Exclude/Filter]?");
 		scanf("%c",&next);
 		if(next=='e')
 		{
+			printf("Exclude all words containing letter: ");
+			scanf("%c", &var);
 			filter_exclude(listeMots, &var);
 		}
 		else if(next=='f')
